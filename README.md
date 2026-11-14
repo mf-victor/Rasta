@@ -180,3 +180,4 @@ Daily quotas for Gemini and Claude are measured in **150-token message units** (
    - **Manual Photo Receipt Forwarding:** Users are also instructed to reply to the invoice message with a photo of their payment receipt. Replying with a photo forwards the receipt + `✅ Approve` / `❌ Reject` buttons to the Management Group (or Owner PV) and notifies `POST /p/{token}/paid`.
 
 ---
+Created By mfvictor | mfvictor.ir
