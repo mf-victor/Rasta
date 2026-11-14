@@ -1,2 +1,4 @@
-# Rasta
-a Telegram AI Chatbot Based on Python ,Aiogram
+# Rasta | رستا
+
+•🤖 a Telegram AI Chatbot Based on Python ,Aiogram! 
+
