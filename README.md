@@ -186,6 +186,7 @@ Switch Rasta's role in one tap via `/persona`:
 
 ---
 Rasta Isn't a Open-Source Project, Maybe soon..!
+
 Rasta.Ai | By mfvictor | mfvictor.ir - t.me/mfvictor2
 ---
 
