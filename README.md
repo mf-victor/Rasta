@@ -185,6 +185,7 @@ Switch Rasta's role in one tap via `/persona`:
 3. **Auto SMS Confirmation + Manual Receipt Backup:** Automatically activates the 30-day subscription as soon as the bank SMS matches (including `paid_late` handling), while preserving photo receipt replies forwarded to the Management Group / Owner.
 
 ---
+Rasta Isn't a Open-Source Project, Maybe soon..!
 Rasta.Ai | By mfvictor | mfvictor.ir - t.me/mfvictor2
 ---
 
