@@ -1,16 +1,17 @@
 <div align="center">
 
-# 🤖 Rasta AI Telegram Bot | چت بات هوشمند تلگرام «رستا»
+# 🤖 Rasta AI Telegram Bot | چت بات هوش مصنوعی «رستا»
 
-**دستیار هوش مصنوعی چندمدله تلگرام با استریمینگ زنده، حالت روح (Inline)، پردازش ویس و تصویر، ابزارهای لحظه‌ای بازار ایران و سیستم پرداخت خودکار کارت‌به‌کارت**
+**دستیار هوش مصنوعی چندمدله تلگرام با شخصیت‌های تخصصی (`persona`)، وب‌سرچ زنده چندموتوره، استریمینگ زنده، حالت روح (Inline)، پردازش ویس و تصویر، ابزارهای لحظه‌ای بازار ایران و سیستم پرداخت خودکار کارت‌به‌کارت**
 
-*A Next-Generation Multi-Model Telegram AI Assistant with Live Rich Streaming, Inline Ghost Mode, Voice & Vision, Real-Time Iran Market Tools, and Automated SMS Card-to-Card Payments*
+*A Next-Generation Multi-Model Telegram AI Assistant with Specialized Personas (`persona`), Multi-Engine Live Web Search, Rich Streaming, Inline Ghost Mode, Voice & Vision, Real-Time Iran Market Tools, and Automated SMS Card-to-Card Payments*
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](#)
 [![aiogram 3.31](https://img.shields.io/badge/aiogram-3.31.0-2CA5E0?logo=telegram&logoColor=white)](#)
 [![SQLite Async](https://img.shields.io/badge/Database-aiosqlite-003B57?logo=sqlite&logoColor=white)](#)
-[![Models](https://img.shields.io/badge/LLMs-Gemini%203.8%20%7C%20Claude%205.5%20%7C%20pyc--lite-8E75B2)](#)
+[![Models](https://img.shields.io/badge/LLMs-Rasta%20Auto%20%7C%20Gemini%203.8%20%7C%20Claude%205.5%20%7C%20PyCourse%20Lite-8E75B2)](#)
 [![Payments](https://img.shields.io/badge/Payment-CartBeCart%20Auto%20SMS-00C853)](#)
+[![License](https://img.shields.io/badge/License-Proprietary-red)](#)
 
 [**🇮🇷 مستندات فارسی**](#-مستندات-فارسی) • [**🇬🇧 English Documentation**](#-english-documentation)
 
@@ -21,94 +22,106 @@
 # 🇮🇷 مستندات فارسی
 
 ## ✨ معرفی پروژه
-**رستا (Rasta)** یک ربات تلگرامی پیشرفته و دوزبانه (فارسی/انگلیسی) است که روی `aiogram 3.31` و ساختار کاملاً ناهمگام (`asyncio`) طراحی شده است. رستا از سه موتور هوش مصنوعی مجزا، استریمینگ زنده پیام‌ها با شمارنده ثانیه فکر کردن (`Thinking Timer`)، حالت روح (`Ghost Mode`) در تمام چت‌های تلگرام، تشخیص صدا و تصویر، دانلود موزیک، نرخ لحظه‌ای طلا/دلار و سیستم اشتراک با درگاه **کارت‌به‌کارت خودکار پیامکی (`pay.pycourse.ir`) + تأیید دستی رسید** بهره می‌برد.
+**رستا (Rasta)** یک ربات هوش مصنوعی پیشرفته و دوزبانه (فارسی/انگلیسی) در تلگرام است که روی `aiogram 3.31` و معماری کاملاً ناهمگام (`asyncio`) توسعه داده شده است. رستا از **۴ مدل هوش مصنوعی مکمل**، **۶ شخصیت تخصصی قابل انتخاب (`/persona`)**، **وب‌سرچ زنده و تقویم لحظه‌ای روز**، استریمینگ زنده پیام‌ها با شمارنده ثانیه فکر کردن (`Thinking Timer`)، حالت روح (`Ghost Mode`) در تمام چت‌های تلگرام، پردازش صدا و تصویر، موزیک‌یاب، نرخ لحظه‌ای طلا و دلار و سیستم اشتراک با درگاه **کارت‌به‌کارت خودکار پیامکی (`pay.pycourse.ir`) + تأیید دستی رسید** بهره می‌برد.
 
 ---
 
-## 🧠 معماری مدل‌های هوش مصنوعی
+## 🧠 معماری مدل‌های هوش مصنوعی (`model`)
 
-رستا از ۳ مدل مکمل پشتیبانی می‌کند که کاربر از منوی `/model` می‌تواند بین آن‌ها جابه‌جا شود:
+رستا از ۴ مدل مکمل پشتیبانی می‌کند که کاربر از منوی `/model` می‌تواند در هر لحظه بین آن‌ها جابه‌جا شود:
 
-| مدل | شناسه پیش‌فرض | ارائه‌دهنده | ویژگی‌ها و کاربرد | دسترسی |
-| :--- | :--- | :--- | :--- | :--- |
-| **🔮 Gemini 3.8 Flash** | `gemini` | `Gemini` | مدل اصلی همه‌فن‌حریف، پشتیبانی از بینایی ماشین (تصویر)، ویس، ابزارهای زنده (قیمت طلا/دلار، دیجی‌کالا، جستجوی وب، تقویم جلالی) | همه کاربران (با سهمیه روزانه) |
-| **🧠 Claude Sonnet 5.5** | `claude-sonnet-5-5` | `Claude` | مدل قدرتمند استدلال، کدنویسی حرفه‌ای، تحلیل عمیق و پاسخ‌های دقیق. نسخه آنتی گرویتی(ag)  | ویژه اشتراک‌های **فلاور، گلد، رستا و هدیه** 🔒 |
-| **⚡ PyCourse Lite** | `pyc-lite` | `pycourse.ir` | مدل سریع و کم‌مصرف با سیستم‌پرامپت فوق‌فشرده و تاریخچه بهینه (۱ پیام اخیر)؛ جایگزین خودکار هنگام اتمام سهمیه روزانه | همه کاربران (سهمیه هفتگی) |
+| مدل | ویژگی‌ها و کاربرد | سهمیه | دسترسی |
+| :--- | :--- | :--- | :--- |
+| **🚀 Rasta Auto** | ترکیبی از چند مدل پرسرعت و سطح پایه، بهینه‌شده برای کارهای روزمره، ترجمه، خلاصه‌سازی و پرسش‌های عمومی | ۳۰ پیام ۲۰۰ توکنی / روز | **رایگان همیشگی برای همه کاربران** (بدون محدودیت ۲ ماهه) |
+| **🔮 Gemini 3.8 Flash** | مدل اصلی همه‌فن‌حریف با پشتیبانی از بینایی ماشین (تحلیل عکس)، ویس، موزیک‌یاب و ابزارهای زنده بازار ایران | روزانه (واحد ۱۵۰ توکنی) | رایگان تا ۲ ماه (۲۰ پیام/روز) + افزایش سهمیه در اشتراک‌ها |
+| **🧠 Claude Sonnet 5.5** | مدل قدرتمند استدلال، کدنویسی حرفه‌ای، تحلیل عمیق و پاسخ‌های دقیق | روزانه (واحد ۱۵۰ توکنی) | ویژه اشتراک‌های **فلاور، گلد، رستا و هدیه** 🔒 |
+| **🔹 PyCourse Lite** | مدل سبک و متنی با مصرف بهینه و محاسبه دقیق بر پایه توکن خروجی | ماهانه (ماه شمسی) | ویژه اشتراک‌های **پولی و هدیه** 🔒 |
+
+---
+
+## 🎭 شخصیت‌ها و حالت‌های تخصصی (`persona`)
+
+کاربران می‌توانند با دستور `/persona` یا دکمه **«🎭 شخصیت رستا»** در منوی اصلی، نقش و لحن دستیار را با یک کلیک تغییر دهند:
+
+- **🤝 حالت عادی رستا:** همه‌فن‌حریف، خودمانی و روان برای مکالمات روزمره
+- **🎓 معلم خصوصی:** آموزش گام‌به‌گام ریاضی، فیزیک، زبان و دروس با مثال ساده
+- **🌐 مترجم حرفه‌ای:** ترجمه روان و دقیق فارسی ↔ انگلیسی بدون توضیح اضافه
+- **💻 دستیار برنامه‌نویسی:** کدنویسی تمیز، دیباگ سریع و معماری نرم‌افزار *(ویژه اشتراک فلاور+)*
+- **📝 خلاصه‌ساز و ویراستار:** خلاصه‌سازی منظم، اصلاح غلط املایی/نیم‌فاصله و رسمی کردن متن
+- **🎮 گیمر حرفه‌ای:** رفیق گیمر با اصطلاحات واقعی گیمینگ، بیلد، تنظیمات FPS و راهنمای بازی‌ها
 
 ---
 
 ## 🔥 قابلیت‌های کلیدی
 
-### ۱. استریمینگ زنده و رابط کاربری RichMessage
-- **استریم زنده (`draft` / `edit` / `inline`):** پشتیبانی از متد جدید `sendRichMessageDraft` تلگرام همراه با عقب‌گرد خودکار (Fallback) به ویرایش زنده پیام.
-- **ثانیه‌شمار زنده تفکر (`Thinking Timer`):** نمایش زمان دقیق پردازش مدل به‌صورت زنده پیش از شروع استریم متن.
-- **قالب‌بندی هوشمند RTL و نقل‌قول کشویی:** تیتر اول پاسخ به شکل بولد و ادامه متن درون باکس نقل‌قول قابل‌بازشدن (`expandable_blockquote`) با رعایت جهت راست‌به‌چپ فارسی.
+### ۱. وب‌سرچ زنده چندموتوره و آگاهی از زمان حال
+- تزریق خودکار تاریخ دقیق شمسی و میلادی به تمام مدل‌ها برای پاسخ‌گویی به‌روز و دقیق.
+- پشتیبانی همزمان از **موتور ۵گانه داخلی (`ddgs` + ویکی‌پدیا فارسی/انگلیسی + Google News RSS + `iran_news_mcp`)** و **اسکیل جستجوی هوشمند با قابلیت سوییچ زنده و Fallback خودکار.**
 
-### ۲. حالت روح (`Ghost Mode` — Inline Query)
-- با تایپ `@bot_username متن سوال` در **هر چت شخصی، گروه یا کانال**، بدون نیاز به حضور مستقیم ربات در آن چت، پاسخ هوش مصنوعی درجا استریم و تکمیل می‌شود.
+### ۲. استریمینگ زنده و رابط کاربری RichMessage
+- **استریم زنده (`draft` / `edit` / `inline`):** پشتیبانی از `sendRichMessageDraft` تلگرام همراه با عقب‌گرد خودکار به ویرایش زنده پیام.
+- **ثانیه‌شمار زنده تفکر (`Thinking Timer`):** نمایش فوری و لحظه‌ای زمان پردازش مدل پیش از شروع استریم متن.
+- **قالب‌بندی هوشمند RTL و نقل‌قول کشویی:** تیتر بولد در خط اول و ادامه پاسخ درون باکس نقل‌قول کشویی (`expandable_blockquote`) با رعایت جهت راست‌به‌چپ فارسی.
 
-### ۳. چندرسانه‌ای: ویس، تصویر و موزیک‌یاب
-- **تبدیل ویس به متن (`Speech-to-Text`):** ارسال ویس فارسی یا انگلیسی، تبدیل خودکار به متن با `SpeechRecognition` و `ffmpeg` و پاسخ‌گویی مستقیم توسط هوش مصنوعی.
-- **بینایی ماشین (`Vision`):** ارسال عکس یا ریپلای روی عکس برای تحلیل، استخراج متن (OCR) یا حل مسئله.
-- **موزیک‌یاب هوشمند (`Music Finder`):** جستجو و ارسال مستقیم فایل صوتی آهنگ‌ها از طریق `yt-dlp` با دستور یا درخواست متنی.
+### ۳. حالت روح (`Ghost Mode` — Inline Query)
+- با تایپ `@bot_username سؤالت` در **هر پی‌وی، گروه یا کانال**، بدون هیچ کارت اضافی در حالت خالی، پاسخ هوش مصنوعی مستقیماً داخل همان چت استریم می‌شود.
 
-### ۴. ابزارهای زنده بازار ایران و وب (Function Calling & MCP)
-- **💵 نرخ لحظه‌ای دلار و ارز (`/dollar`):** دریافت آنلاین نرخ دلار، یورو، درهم و تتر از `tgju-mcp`.
-- **🪙 نرخ طلا و سکه (`/gold`):** دریافت لحظه‌ای مظنه طلا ۱۸ عیار، سکه امامی، بهار آزادی، نیم و ربع سکه.
-- **🛒 جستجوی قیمت دیجی‌کالا (`digikala_price`):** استعلام قیمت و مشخصات کالاها از دیجی‌کالا.
-- **📰 اخبار ایران و جستجوی زنده وب (`live_search`):** دسترسی به آخرین اخبار ایران (`iran-news-mcp`) و موتور جستجوی DuckDuckGo.
+### ۴. چندرسانه‌ای: ویس، تصویر و موزیک‌یاب
+- **تبدیل ویس به متن (`Speech-to-Text`):** ارسال ویس فارسی یا انگلیسی و دریافت پاسخ مستقیم.
+- **بینایی ماشین (`Vision`):** ارسال یا ریپلای روی عکس برای تحلیل، استخراج متن و حل مسئله.
+- **موزیک‌یاب هوشمند (`Music Finder`):** جستجو و ارسال مستقیم فایل صوتی آهنگ‌ها از طریق `yt-dlp`.
 
-### ۵. گاردریل‌های امنیتی چندلایه و معنایی (Semantic Embedding Guard)
-- **محافظت در برابر افشای پرامپت (`leak_guard`):** ترکیب فیلترهای عبارات باقاعده و مدل امبدینگ `text-embedding-3-small` پای‌کورس برای تشخیص معنایی حملات Prompt Injection.
-- **محافظت از توکن بات و تخلیه توکن (`no_bot_token` / `no_token_drain`):** مسدودسازی ارسال توکن‌های تلگرام و جلوگیری از درخواست‌های اسپم یا استخراج انبوه توکن.
-- **قفل کدنویسی برای پلن رایگان و برنز:** جلوگیری از تولید کدهای برنامه‌نویسی در پلن رایگان/برنز و هدایت کاربر به اشتراک فلاور و بالاتر.
+### ۵. ابزارهای زنده بازار ایران (`/dollar` و `/gold`)
+- **💵 نرخ لحظه‌ای دلار و ارز (`/dollar`):** تابلو زنده دلار، تتر، یورو، درهم، پوند و لیر از `tgju-mcp`.
+- **🪙 نرخ طلا و سکه (`/gold`):** تابلو لحظه‌ای طلای ۱۸ و ۲۴ عیار، مثقال، سکه امامی، بهار آزادی، نیم، ربع و انس جهانی.
+- **🛒 استعلام قیمت دیجی‌کالا:** جستجوی قیمت روز کالاها از طریق `digikala-mcp`.
+
+### ۶. گاردریل‌های امنیتی چندلایه و معنایی
+- ترکیب فیلترهای سریع Regex با گارد معنایی Embedding (همراه با Circuit Breaker و سقف زمانی ۱.۵ ثانیه) برای جلوگیری از Prompt Injection، افشای اطلاعات حساس، محتوای نامناسب و قفل کدنویسی در پلن‌های رایگان و برنز.
 
 ---
 
 ## 💎 جدول اشتراک‌ها و سهمیه‌ها (`/subs`)
 
-سهمیه مدل‌های Gemini و Claude بر پایه **واحدهای ۱۵۰ توکنی** در روز (بازنشانی در ساعت `00:00` به وقت تهران) و سهمیه `pyc-lite` به‌صورت هفتگی محاسبه می‌شود:
+سهمیه `Rasta Auto` بر پایه **واحد ۲۰۰ توکنی** (روزانه)، سهمیه `Gemini` و `Claude` بر پایه **واحد ۱۵۰ توکنی** (روزانه، ریست در `00:00` تهران) و سهمیه `PyCourse Lite` بر پایه **توکن خروجی ماهانه** محاسبه می‌شود:
 
-| پلن اشتراک | سهمیه روزانه Gemini | سهمیه روزانه Claude 5.5 | ویس روزانه | کدنویسی | ظرفیت هفتگی `pyc-lite` | قیمت (۳۰ روزه) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **🌱 عادی (رایگان)** | ۲۰ پیام (۳,۰۰۰ توکن) | 🔒 قفل | ۵ ویس | ❌ قفل | `1x/هفته` (۱,۰۰۰ توکن) | رایگان |
-| **🥉 برنز (`bronze`)** | ۶۰ پیام (۹,۰۰۰ توکن) | 🔒 قفل | ۱۰ ویس | ❌ قفل | `1.75x/هفته` (۱,۷۵۰ توکن) | ۷۵,۰۰۰ تومان |
-| **🌸 فلاور (`flower`)** | ۱۰۰ پیام (۱۵,۰۰۰ توکن) | **۵۰ پیام** (۷,۵۰۰ توکن) | ۲۰ ویس | ✅ باز | `2.25x/هفته` (۲,۲۵۰ توکن) | ۱۱۰,۰۰۰ تومان |
-| **🥇 گلد (`gold`)** | ۱۷۰ پیام (۲۵,۵۰۰ توکن) | **۹۵ پیام** (۱۴,۲۵۰ توکن) | ۳۵ ویس | ✅ باز | `2.75x/هفته` (۲,۷۵۰ توکن) | ۱۸۰,۰۰۰ تومان |
-| **👑 رستا (`rasta`)** | ۵۰۰ پیام (۷۵,۰۰۰ توکن) | **۳۰۰ پیام** (۴۵,۰۰۰ توکن) | ۱۰۰ ویس | ✅ باز | `5x/هفته` (۵,۰۰۰ توکن) | ۳۵۱,۰۰۰ تومان |
-| **🎁 هدیه (`gift`)** | ۵۵ پیام (۸,۲۵۰ توکن) | **۳۰ پیام** (۴,۵۰۰ توکن) | ۱۲ ویس | ✅ باز | `1.75x/هفته` (۱,۷۵۰ توکن) | ۵ دعوت با خرید موفق |
+| پلن اشتراک | Rasta Auto (روزانه) | Gemini 3.8 (روزانه) | Claude 5.5 (روزانه) | ویس روزانه | کدنویسی | PyCourse Lite (ماهانه) | قیمت (۳۰ روزه) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **🌱 عادی (رایگان)** | ۳۰ پیام (همیشگی) | ۲۰ پیام *(تا ۲ ماه)* | 🔒 قفل | ۵ ویس | ❌ قفل | 🔒 ویژه اشتراک | رایگان |
+| **🥉 برنز (`bronze`)** | ۳۰ پیام | ۶۰ پیام | 🔒 قفل | ۱۰ ویس | ❌ قفل | `1.75x/ماه` (۱,۷۵۰ توکن) | ۷۵,۰۰۰ تومان |
+| **🌸 فلاور (`flower`)** | ۳۰ پیام | ۱۰۰ پیام | **۵۰ پیام** | ۲۰ ویس | ✅ باز | `2.25x/ماه` (۲,۲۵۰ توکن) | ۱۱۰,۰۰۰ تومان |
+| **🥇 گلد (`gold`)** | ۳۰ پیام | ۳۰۰ پیام | **۹۵ پیام** | ۴۰ ویس | ✅ باز | `3x/ماه` (۳,۰۰۰ توکن) | ۲۶۷,۰۰۰ تومان |
+| **👑 رستا (`rasta`)** | ۳۰ پیام | ۷۰۰+ پیام | **۳۰۰ پیام** | ۷۰ ویس | ✅ باز | `4x/ماه` (۴,۰۰۰ توکن) | ۳۵۱,۰۰۰ تومان |
+| **🎁 هدیه (`gift`)** | ۳۰ پیام | ۱۵۰ پیام | **۳۰ پیام** | ۱۵ ویس | ✅ باز | `2.25x/ماه` (۲,۲۵۰ توکن) | ۵ دعوت با خرید موفق |
 
 ---
 
 ## 💳 سیستم پرداخت دوگانه کارت‌به‌کارت (خودکار پیامکی + رسید تصویری)
 
-فرآیند خرید اشتراک در رستا به‌گونه‌ای طراحی شده که **تأیید خودکار آنی** دارد(ارایه دهنده PyCourse)
+فرآیند خرید اشتراک در رستا هم **تأیید خودکار پیامکی آنی** دارد و هم **پشتیبان دستی رسید برای مدیریت**:
 
-1. **پیش‌فاکتور قبل از پرداخت:** با کلیک روی هر پلن، ابتدا مشخصات کامل آن پلن و قیمت پایه همراه با دو دکمه ریچ‌مسیجی **ادامه** و **انصراف** نمایش داده می‌شود.
-2. **مبلغ دقیق یکتا و تایمر لایو:** پس از تأیید ادامه، سفارش در سرویس `https://pay.pycourse.ir` ثبت شده و مبلغ دقیق ریالی (قیمت پایه + ۱ تا ۹۹۹۹ ریال رقم یکتا برای تطبیق پیامک بانکی) به همراه دکمه کپی شماره کارت، دکمه کپی مبلغ دقیق و **تایمر لایو شمارش معکوس (`⏳ MM:SS`)** نمایش داده می‌شود.
-3. **تأیید خودکار پیامکی:** به‌محض واریز مبلغ دقیق ریالی، اپلیکیشن اندروید متصل به `pay.pycourse.ir` پیامک بانک را تشخیص داده و ربات بدون دخالت دست، اشتراک کاربر را فعال می‌کند.
-4. **حفظ ارسال رسید برای مدیر / گروه مدیریت:** همزمان کاربر می‌تواند تصویر رسید را روی پیام فاکتور ریپلای کند تا عکس رسید به همراه دکمه‌های **✅ تأیید اشتراک** و **❌ رد رسید** به گروه مدیریت (یا پی‌وی مدیر) ارسال شود.
+1. **پیش‌فاکتور قبل از پرداخت:** نمایش مشخصات کامل اشتراک و قیمت پایه با دکمه‌های ریچ‌مسیجی **ادامه** و **انصراف**.
+2. **مبلغ یکتای ریالی و تایمر لایو:** نمایش مبلغ دقیق ریالی (همراه با خورده‌ریال یکتا جهت تطبیق خودکار پیامک بانک)، دکمه‌های کپی سریع شماره کارت و مبلغ دقیق و تایمر زنده (`⏳ MM:SS`).
+3. **تأیید خودکار پیامکی + پشتیبانی از تأخیر پیامک (`paid_late`):** به‌محض دریافت پیامک بانکی با مبلغ دقیق، اشتراک کاربر به‌صورت خودکار فعال می‌شود.
+4. **حفظ ارسال رسید تصویری:** کاربر همچنان می‌تواند عکس رسید را روی پیام فاکتور ریپلای کند تا برای مدیر یا گروه مدیریت فوروارد شود.
 
 ---
 
-## ⌨️ دستورات ربات
+## ⌨️ دستورات کاربران
 
-### دستورات عمومی کاربران
 | دستور | توضیح |
 | :--- | :--- |
 | `/start` | منوی اصلی، معرفی قابلیت‌ها و ثبت لینک دعوت (`referral`) |
-| `/model` | مشاهده و تغییر مدل فعال (`Gemini 3.8`، `Claude Sonnet 5.5`، `pyc-lite`) |
+| `/model` | مشاهده و تغییر مدل فعال (`Rasta Auto`، `Gemini 3.8`، `Claude Sonnet 5.5`، `PyCourse Lite`) |
+| `/persona` | تغییر شخصیت و لحن رستا (عادی، معلم خصوصی، مترجم، برنامه‌نویس، ویراستار، گیمر) |
 | `/subs` | جدول اشتراک‌های ویژه، لینک دعوت اختصاصی و خرید اشتراک |
-| `/usage` یا `/quota` | مشاهده دقیق میزان مصرف توکن، ویس و زمان بازنشانی سهمیه‌ها |
-| `/dollar` | تابلوی لحظه‌ای نرخ دلار، یورو، درهم و تتر |
-| `/gold` | تابلوی لحظه‌ای نرخ طلا ۱۸ عیار و انواع سکه |
+| `/usage` | مشاهده دقیق میزان مصرف، سهمیه باقی‌مانده و زمان بازنشانی |
+| `/dollar` | تابلوی لحظه‌ای نرخ دلار، تتر، یورو، درهم، پوند و لیر |
+| `/gold` | تابلوی لحظه‌ای نرخ طلای ۱۸ و ۲۴ عیار، سکه و انس جهانی |
 | `/lang` | تغییر زبان رابط کاربری ربات (فارسی 🇮🇷 / انگلیسی 🇬🇧) |
-| `/feedback` | ارسال انتقاد، پیشنهاد یا گزارش باگ به گروه مدیریت (روزی ۱ بار) |
+| `/feedback` | ارسال نظر، پیشنهاد یا گزارش باگ به تیم مدیریت |
 | `/reset` | پاک‌سازی تاریخچه گفتگوی فعلی با هوش مصنوعی |
-| `/help` | راهنمای کامل استفاده از ربات |
-
-
-
+| `/help` | راهنمای کامل دستورات و امکانات ربات |
 
 ---
 ---
@@ -116,56 +129,65 @@
 # 🇬🇧 English Documentation
 
 ## ✨ Overview
-**Rasta** is a production-grade, bilingual (Persian/English) AI Telegram bot built with Python `asyncio` and `aiogram 3.31`. It orchestrates three LLM backends (**Gemini 3.8 Flash**, **Claude Sonnet 5.5**, and **PyCourse Lite `pyc-lite`**), delivers real-time streaming responses with a live thinking timer, works in any chat via **Inline Ghost Mode**, processes voice notes and images, fetches live Iranian market data (USD/Gold/Digikala), and features a hybrid **Automated SMS Card-to-Card Payment System (`pay.pycourse.ir`) + Manual Receipt Verification**.
+**Rasta** is a proprietary, production-grade bilingual (Persian/English) AI Telegram bot built on Python `asyncio` and `aiogram 3.31`. It orchestrates **four complementary AI models** (**Rasta Auto**, **Gemini 3.8 Flash**, **Claude Sonnet 5.5**, and **PyCourse Lite**), offers **six switchable personas (`persona`)**, integrates **multi-engine live web search** with real-time date awareness, streams replies live with a thinking timer, runs in any chat via **Inline Ghost Mode**, supports voice/vision/music, and provides a hybrid **Automated SMS Card-to-Card Payment System (`pay.pycourse.ir`) + Manual Receipt Verification**.
 
 ---
 
-## 🧠 Multi-Model LLM Architecture
+## 🧠 Multi-Model Architecture (`model`)
 
-Users can switch models on the fly via `/model`:
+- **🚀 Rasta Auto:** A fast multi-model everyday blend — **permanently free** for all users (**30 messages × 200 tokens/day**, exempt from the 2-month free trial cap).
+- **🔮 Gemini 3.8 Flash:** Multimodal powerhouse supporting photos, voice notes, music search, and live Iranian market tools (free for 2 months at 20 msgs/day, expanded on paid plans).
+- **🧠 Claude Sonnet 5.5:** High-precision reasoning and coding model — exclusive to **Flower, Gold, Rasta, and Gift** subscribers.
+- **🔹 PyCourse Lite:** Lightweight text-only model billed strictly on **monthly output tokens** — exclusive to **paid and gift** subscribers.
 
-1. **🔮 Gemini 3.8 Flash (`Gemini Google AI Studio`):** Default multimodal powerhouse supporting images, voice transcription, and live tool calling (Iran currency/gold market, Digikala product lookup, web search, Jalali calendar).
-2. **🧠 Claude Sonnet 5.5 (`ag/claude-sonnet-5-5`):** Dedicated API configuration (`CLAUDE_API_KEY`) for advanced reasoning and coding. Locked for Free/Bronze users and unlocked exclusively for **Flower, Gold, Rasta, and Gift** subscribers.
-3. **⚡ PyCourse Lite (`pyc-lite` via `pycourse.ir`):** Ultra-fast model with a minimal token-saving system prompt and 1-message history window (`history[-1:]`), serving both as a selectable lightweight model and an automatic fallback when daily quotas are exhausted.
+---
+
+## 🎭 Specialized Personas (`persona`)
+
+Switch Rasta's role in one tap via `/persona`:
+- **🤝 Normal Rasta** — Friendly, natural everyday assistant
+- **🎓 Private Tutor** — Step-by-step math, science & study coaching
+- **🌐 Pro Translator** — Clean, fluent Persian ↔ English translation
+- **💻 Coding Assistant** — Clean code & debugging *(Flower+ plans)*
+- **📝 Editor & Summarizer** — Concise summaries, proofreading & formal rewriting
+- **🎮 Pro Gamer** — Gaming buddy for builds, FPS tweaks, lore & walkthroughs
 
 ---
 
 ## 🔥 Key Features
 
-- **Live Rich Streaming & Thinking Timer:** Uses Telegram's `sendRichMessageDraft` (with seamless fallback to message editing) and displays a live second-by-second thinking counter before tokens arrive.
-- **Inline Ghost Mode (`@bot_username <prompt>`):** Invoke Rasta inside any private chat or group without adding the bot to the chat, complete with live inline message streaming.
-- **Voice, Vision & Music Finder:**
-  - Transcribes Persian and English voice messages via `SpeechRecognition` + `ffmpeg`.
-  - Analyzes photos and screenshots with multimodal vision.
-  - Downloads and sends audio tracks on demand using `yt-dlp`.
-- **Real-Time Iran Market & Web Tools:** Built-in `/dollar` and `/gold` dashboards powered by `tgju-mcp`, product search via `digikala-mcp`, news via `iran-news-mcp`, and live web search via `duckduckgo-search`.
-- **Multi-Layer Security & Semantic Guardrails:** Combines fast regex filters with semantic cosine similarity (`text-embedding-3-small`) to block prompt-leak attempts, bot token exposure, spam, and unauthorized code generation on free plans.
+- **Multi-Engine Live Web Search:** Combines a 5-engine concurrent search pipeline (`ddgs`, Persian/English Wikipedia API, Google News RSS, DuckDuckGo HTML, `iran_news_mcp`) with optional Skill support and automatic fallback, plus live Jalali/Gregorian date awareness.
+- **Live Rich Streaming & Thinking Timer:** Uses Telegram's `sendRichMessageDraft` (with automatic edit fallback) and starts the live thinking counter immediately.
+- **Inline Ghost Mode (`@bot_username <prompt>`):** Ask Rasta inside any private chat or group with clean inline results and live answer streaming.
+- **Voice, Vision & Music Finder:** Processes voice notes, analyzes images, and fetches audio tracks via `yt-dlp`.
+- **Real-Time Iran Market Dashboards:** Built-in `/dollar`, `/gold` (`tgju-mcp`), and Digikala price lookup (`digikala-mcp`).
+- **Multi-Layer Security Guardrails:** Fast local regex checks paired with timeout-bounded semantic embedding guards.
 
 ---
 
-## 💎 Subscription Plans & Quotas
+## 💎 Subscription Plans & Quotas (`/subs`)
 
-Daily quotas for Gemini and Claude are measured in **150-token message units** (resetting at `00:00` Asia/Tehran), while `pyc-lite` uses a weekly token pool:
-
-| Plan | Daily Gemini | Daily Claude 5.5 | Daily Voice | Coding | Weekly `pyc-lite` | Price (30 Days) |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **🌱 Free** | 20 msgs (3,000 tok) | 🔒 Locked | 5 | ❌ Locked | `1x/week` | Free |
-| **🥉 Bronze** | 60 msgs (9,000 tok) | 🔒 Locked | 10 | ❌ Locked | `1.75x/week` | 75,000 Toman |
-| **🌸 Flower** | 100 msgs (15,000 tok) | **50 msgs** (7,500 tok) | 20 | ✅ Unlocked | `2.25x/week` | 110,000 Toman |
-| **🥇 Gold** | 170 msgs (25,500 tok) | **95 msgs** (14,250 tok) | 35 | ✅ Unlocked | `2.75x/week` | 180,000 Toman |
-| **👑 Rasta** | 500 msgs (75,000 tok) | **300 msgs** (45,000 tok) | 100 | ✅ Unlocked | `5x/week` | 351,000 Toman |
-| **🎁 Gift** | 55 msgs (8,250 tok) | **30 msgs** (4,500 tok) | 12 | ✅ Unlocked | `1.75x/week` | 5 Paid Referrals |
+| Plan | Rasta Auto (Daily) | Gemini 3.8 (Daily) | Claude 5.5 (Daily) | Daily Voice | Coding | PyCourse Lite (Monthly) | Price (30 Days) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **🌱 Free** | 30 msgs (Always Free) | 20 msgs *(2 Months)* | 🔒 Locked | 5 | ❌ Locked | 🔒 Paid Plans | Free |
+| **🥉 Bronze** | 30 msgs | 60 msgs | 🔒 Locked | 10 | ❌ Locked | `1.75x/month` (1,750 tok) | 75,000 Toman |
+| **🌸 Flower** | 30 msgs | 100 msgs | **50 msgs** | 20 | ✅ Unlocked | `2.25x/month` (2,250 tok) | 110,000 Toman |
+| **🥇 Gold** | 30 msgs | 300 msgs | **95 msgs** | 40 | ✅ Unlocked | `3x/month` (3,000 tok) | 267,000 Toman |
+| **👑 Rasta** | 30 msgs | 700+ msgs | **300 msgs** | 70 | ✅ Unlocked | `4x/month` (4,000 tok) | 351,000 Toman |
+| **🎁 Gift** | 30 msgs | 150 msgs | **30 msgs** | 15 | ✅ Unlocked | `2.25x/month` (2,250 tok) | 5 Paid Referrals |
 
 ---
 
 ## 💳 Hybrid Card-to-Card Payment System (`pay.pycourse.ir`)
 
-1. **Step 1 — Pre-Invoice Preview:** Clicking a plan in `/subs` displays a RichMessage pre-invoice with full plan specifications, base price, and **Continue** (`confirm_buy:<plan>`) / **Cancel** (`cmd:subs`) buttons.
-2. **Step 2 — Unique Rial Amount & Live Countdown Timer:** Clicking Continue creates a payment on **CartBeCart (`POST /v1/payments`)** and fetches destination card details and `seconds_left` from `GET /p/{token}/status`. The bot renders the exact unique `amount_rial` (base amount + 1..9999 Rial suffix), one-tap copy buttons for both the card number and exact Rial amount, and a **live ticking countdown timer (`⏳ MM:SS`)**.
-3. **Step 3 — Automatic SMS Matching + Manual Receipt Backup:**
-   - **Auto SMS Confirmation:** A background watcher polls `/p/{token}/status` every 3 seconds. As soon as the merchant's Android SMS app matches the incoming bank SMS with the exact `amount_rial`, the bot automatically activates the 30-day subscription and logs the approval to the Management Group.
-   - **Manual Photo Receipt Forwarding:** Users are also instructed to reply to the invoice message with a photo of their payment receipt. Replying with a photo forwards the receipt + `✅ Approve` / `❌ Reject` buttons to the Management Group (or Owner PV) and notifies `POST /p/{token}/paid`.
+1. **Pre-Invoice Preview:** Displays full plan specifications, base price, and RichMessage **Continue** / **Cancel** buttons.
+2. **Unique Rial Amount & Live Countdown:** Generates a unique Rial amount (`base + 1..9999 Rial`), one-tap copy buttons for card number & exact Rial amount, and a live countdown timer (`⏳ MM:SS`).
+3. **Auto SMS Confirmation + Manual Receipt Backup:** Automatically activates the 30-day subscription as soon as the bank SMS matches (including `paid_late` handling), while preserving photo receipt replies forwarded to the Management Group / Owner.
 
 ---
-Rasta isn't a open source project. maybe soon.
-Created By mfvictor | mfvictor.ir
+Rasta.Ai | By mfvictor | mfvictor.ir - t.me/mfvictor2
+---
+
+<div align="center">
+<sub>© Rasta AI Bot — Proprietary Software. All rights reserved.</sub>
+</div>
